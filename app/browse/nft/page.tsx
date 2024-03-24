@@ -12,7 +12,7 @@ export async function generateMetadata(): Promise<Metadata> {
       ...(await fetchMetadata(
         new URL(
           "/browse/nft/frames",
-          vercelURL() || "http://localhost:3000"
+          vercelURL() || "http://:3000"
         )
       )),
     },

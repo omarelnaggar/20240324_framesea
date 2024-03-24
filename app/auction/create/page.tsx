@@ -12,7 +12,7 @@ export async function generateMetadata(): Promise<Metadata> {
       ...(await fetchMetadata(
         new URL(
           "/auction/create/frames",
-          vercelURL() || "http://localhost:3000"
+          vercelURL() || process.env.FRAME_URL
         )
       )),
     },

@@ -8,12 +8,12 @@ export function currentURL(pathname: string): URL {
   try {
     return new URL(pathname, `${protocol}://${host}`);
   } catch (error) {
-    return new URL("http://localhost:3000");
+    return new URL(process.env.FRAME_URL as string);
   }
 }
 
 export function vercelURL() {
-  return process.env.VERCEL_URL
-    ? `https://${process.env.VERCEL_URL}`
+  return process.env.FRAME_URL
+    ? process.env.FRAME_URL
     : undefined;
 }
