@@ -1,0 +1,4 @@
+.next
+.env.local
+app/.DS_Store
+/node_modules
